@@ -1,269 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-    --primary: #3b82f6;
-    /* Vibrant Blue from screenshot */
-    --primary-hover: #2563eb;
-    --secondary: #64748b;
-    --bg-light: #f9fafb;
-    --white: #ffffff;
-    --text-dark: #1e293b;
-    --text-muted: #6b7280;
-    --border-color: #e5e7eb;
-    --input-bg: #f3f4f6;
-    --error: #ef4444;
-    --success: #10b981;
-    --font: 'Inter', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font);
-}
+/* Google Font for a modern feel */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-/* Background Pattern for Auth Pages */
-.auth-page {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 20px;
-    background: url('../img/bg_pattern.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.auth-card {
-    background: var(--white);
-    padding: 4rem 3.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 480px;
-}
-
-.auth-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.auth-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.auth-header p {
-    color: var(--text-dark);
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* Form Styles */
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: var(--text-dark);
-}
-
-.form-group input {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    background: var(--white);
-    font-size: 1rem;
-    transition: all 0.2s ease;
-}
-
-/* Match the blue-ish password field look if possible */
-.form-group input[type="password"] {
-    background: #eff6ff;
-}
-
-.form-group input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s ease;
-    font-size: 1.05rem;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: var(--white);
-    width: 100%;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-1px);
-}
-
-/* Landing Page Styles */
-.navbar {
-    background: var(--white);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1.2rem 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.hero-section {
-    padding: 6rem 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-}
-
-/* Dashboard Styles */
-.dashboard-container {
-    display: flex;
-    min-height: 100vh;
-}
-
-.sidebar {
-    width: 280px;
-    background: var(--white);
-    border-right: 1px solid var(--border-color);
-    padding: 2.5rem 1.5rem;
-    height: 100vh;
-    position: fixed;
-}
-
-.sidebar-nav {
-    margin-top: 3rem;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-    padding: 0.85rem 1.25rem;
-    color: var(--secondary);
-    border-radius: 12px;
-    margin-bottom: 0.5rem;
-    gap: 15px;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.nav-item:hover,
-.nav-item.active {
-    background: #eff6ff;
-    color: var(--primary);
-}
-
-.main-content {
-    flex: 1;
-    margin-left: 280px;
-    padding: 3rem 4rem;
 }
 
 .card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.table-wrapper {
-    margin-top: 2rem;
-    overflow-x: auto;
-}
-
-table {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     width: 100%;
-    border-collapse: collapse;
+    max-width: 450px;
 }
 
-th {
-    text-align: left;
-    padding: 1rem;
+h2 {
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-sizing: border-box; /* Critical for UX layout */
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #4338ca;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 1.5rem;
     font-size: 0.85rem;
-    color: var(--secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid var(--border-color);
+    color: #718096;
 }
 
-td {
-    padding: 1.25rem 1rem;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.95rem;
-}
-
-.alert {
-    padding: 1rem 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    font-weight: 500;
-}
-
-.alert-error {
-    background: #fef2f2;
-    color: #991b1b;
-}
-
-@media (max-width: 1024px) {
-    .sidebar {
-        display: none;
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding: 2rem;
-    }
-
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
+.footer-text a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
 }
