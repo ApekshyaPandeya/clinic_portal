@@ -3,11 +3,25 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Server Configuration (Updated for School Server)
+/**
+ * DB Configuration
+ * Toggle between local and server settings
+ */
+
+// Local XAMPP Defaults
+/*
 $host = "localhost";
+$dbname = "clinic_db";
+$user = "root";
+$pass = "";
+*/
+
+// College Server Settings (STRICTLY FOR DEPLOYMENT)
+$host = "localhost";
+$dbname = "np03cy4a240062";
 $user = "np03cy4a240062";
 $pass = "ycvoHfpjCw";
-$dbname = "np03cy4a240062";
+
 
 try {
     $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
@@ -17,6 +31,7 @@ try {
         PDO::ATTR_EMULATE_PREPARES => false,
     ]);
 } catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+    error_log("Connection failed: " . $e->getMessage());
+    die("Database connection failed. Please check your configuration.");
 }
 ?>

@@ -1,5 +1,5 @@
--- Clinic Management Portal - Deployment SQL
--- Import this into your server's phpMyAdmin
+-- Clinic Management System - Deployment SQL
+-- Student Name: Apekshya Pandeya (2506550)
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -73,8 +73,9 @@ CREATE TABLE medications (
 );
 
 -- Default Data (Password: password123)
+-- Hash generated via password_hash('password123', PASSWORD_DEFAULT)
 INSERT INTO users (username, password, role, full_name, email) VALUES 
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'System Administrator', 'admin@clinic.com');
+('admin', '$2y$10$iySAPM7IUdmdIjCHXJNZQO0..YPTaTVEZja4ERucvDMPFA40/sC0', 'admin', 'Apekshya Pandeya', 'admin@clinicportal.com');
 
 INSERT INTO doctors (name, specialization, contact, email) VALUES 
 ('Dr. Smith', 'Cardiology', '1234567890', 'smith@clinic.com'),
