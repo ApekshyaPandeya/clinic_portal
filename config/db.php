@@ -1,20 +1,14 @@
 <?php
-// config/db.php
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-/**
- * DB Configuration
- * Toggle between local and server settings
- */
 
-// Local XAMPP Defaults
-/*
-$host = "localhost";
-$dbname = "clinic_db";
-$user = "root";
-$pass = "";
-*/
+// $host = "localhost";
+// $dbname = "clinic_db";
+// $user = "root";
+// $pass = "";
+// */
 
 // College Server Settings (STRICTLY FOR DEPLOYMENT)
 $host = "localhost";
